@@ -44,7 +44,7 @@ public class DeviceResourceProvider implements IResourceProvider {
 		dev.addUndeclaredExtension(someExt);
 		
 		dev.getSomeOrg().setResource(org); //this doesn't work
-//		dev.setSomeOrg(new ResourceReferenceDt(org)); //this almost works, the Organization/ prefix is missing
+		dev.setSomeOtherOrg(new ResourceReferenceDt(org)); //this almost works, the Organization/ prefix is missing
 		
 		dev.getOwner().setResource(org); //this works
 		

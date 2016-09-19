@@ -14,6 +14,10 @@ public class ExtendedDevice extends Device {
 	@Child(name="someOrg")
 	@Extension(url="http://extensionsBaseUrl/Device#someOrg", definedLocally=true, isModifier = false)
 	private ResourceReferenceDt someOrg;
+	
+	@Child(name="someOtherOrg")
+	@Extension(url="http://extensionsBaseUrl/Device#someOtherOrg", definedLocally=true, isModifier = false)
+	private ResourceReferenceDt someOtherOrg;
 
 	public ResourceReferenceDt getSomeOrg() {
 		if (someOrg == null) {
@@ -24,6 +28,17 @@ public class ExtendedDevice extends Device {
 
 	public void setSomeOrg(ResourceReferenceDt someOrg) {
 		this.someOrg = someOrg;
+	}
+
+	public ResourceReferenceDt getSomeOtherOrg() {
+		if (someOtherOrg == null) {
+			someOtherOrg = new ResourceReferenceDt();
+		}
+		return someOtherOrg;
+	}
+
+	public void setSomeOtherOrg(ResourceReferenceDt someOtherOrg) {
+		this.someOtherOrg = someOtherOrg;
 	}
 	
 }
